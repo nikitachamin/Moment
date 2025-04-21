@@ -1,0 +1,60 @@
+.delivery-section {
+    max-width: 760px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    padding: 35px 28px 26px 28px;
+  }
+  .delivery-section h2 {
+    margin-top: 0;
+    font-size: 2.1em;
+    color: #234;
+    letter-spacing: 0.5px;
+  }
+  .delivery-section p {
+    color: #444d;
+    font-size: 1.08em;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .delivery-features {
+    margin: 22px 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .delivery-features li {
+    display: flex;
+    align-items: start;
+    gap: 0.7em;
+    background: #f0f5fa;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: transform 0.22s, box-shadow 0.25s;
+  }
+  .delivery-features li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 14px rgba(29,72,145,0.13);
+    z-index: 1;
+    background: #e6eef8;
+  }
+  .delivery-features li .emoji {
+    font-size: 1.36em;
+    line-height: 1.1em;
+    min-width: 30px;
+  }
+  @media (max-width: 600px) {
+    .delivery-section {
+      padding: 19px 7px 14px 7px;
+      border-radius: 9px;
+    }
+    .delivery-section h2 {
+      font-size: 1.27em;
+    }
+    .delivery-features li {
+      font-size: 0.99em;
+      padding: 7px 9px;
+    }
+  }

@@ -1,0 +1,53 @@
+.contact-service-section {
+    background: #eafffb;
+    border: 1px solid #b6e0e2;
+    border-radius: 18px;
+    padding: 27px 22px 23px 28px;
+    margin-bottom: 24px;
+    }
+    .contact-service-section h2 {
+    font-size: 1.31rem;
+    color: #215f64;
+    margin-bottom: 12px;
+    margin-top: 0;
+    letter-spacing: 0.01em;
+    }
+    .contact-list-block {
+    background: #f8fcfb;
+    border-left: 5px solid #ace6d4;
+    border-radius: 13px;
+    padding: 19px 18px 12px 19px;
+    margin-top: 14px;
+    font-size: 1rem;
+    color: #235563;
+    line-height: 1.43;
+    }
+    .contact-list {
+    list-style: none;
+    margin: 0 0 8px 0;
+    padding: 0;
+    }
+    .contact-list li {
+    margin-bottom: 6px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    }
+    .contact-strong {
+    color: #206265;
+    font-weight: 600;
+    }
+    @media (max-width: 600px) {
+    .contact-service-section {
+    padding: 14px 7px 15px 7px;
+    border-radius: 11px;
+    }
+    .contact-list-block {
+    padding: 10px 7px 7px 10px;
+    border-radius: 7px;
+    }
+    .contact-service-section h2 {
+    font-size: 1.13rem;
+    }
+    }

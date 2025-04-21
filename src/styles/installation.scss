@@ -1,0 +1,75 @@
+ .installation__title {
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .process-step {
+            border-left: 4px solid #6a6a6a;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+           
+        }
+        .process-step:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgb(0,0,0,0.1);
+            z-index: 2;
+            border-left: 4px solid red;
+            &::before {
+                background-color: red;
+                
+
+              }
+        }
+        
+        .process-step:before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #6a6a6a;
+            border-radius: 50%;
+           
+        }
+        
+        .step-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .step-details {
+            padding-left: 20px;
+    
+        }
+        
+        .step-details p {
+            position: relative;
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+        
+        .step-details p:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6a6a6a;
+        }

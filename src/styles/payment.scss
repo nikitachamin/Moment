@@ -1,0 +1,60 @@
+.payment-service-section {
+    padding: 22px 17px 28px 22px;
+    border-radius: 20px;
+    background: #eaf5f6;
+    margin-bottom: 22px;
+    border: 1px solid #bde3ea;
+  }
+  
+  .payment-service-section h2 {
+    margin-bottom: 12px;
+    color: #206265;
+    font-weight: 700;
+    font-size: 1.45rem;
+  }
+  
+  .payment-list-block {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px 15px 12px 18px;
+    box-shadow: 0 2px 8px rgba(98, 177, 203, 0.06);
+  }
+  
+  .payment-list {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  
+  .payment-list li {
+    margin-bottom: 6px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .payment-strong {
+    color: #206265;
+    font-weight: 600;
+  }
+  
+  .payment-options {
+    margin-top: 9px;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 600px) {
+    .payment-service-section {
+      padding: 16px 9px 19px 12px;
+      border-radius: 14px;
+    }
+    .payment-list-block {
+      padding: 11px 8px 6px 13px;
+      border-radius: 9px;
+    }
+    .payment-service-section h2 {
+      font-size: 1.2rem;
+    }
+  }
