@@ -145,7 +145,7 @@ function Header() {
         <div className="logo_info">
           <h1 className="logo_info_title">GRAND STONE</h1>
           <h4 className="logo_info_title">Гранитная мастерская</h4>
-          <p>Памятники из природного камня от элит до эконо класса</p>
+          <p>Памятники из природного камня от эконом до элитного класса</p>
         </div>
 
         <div className="header_info-place">

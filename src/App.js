@@ -20,8 +20,9 @@ function App() {
    <>  
       <Router>
 
-        <Header />
+      <Header />
           <main className="container">
+         
             <Switch>  
               <Route exact path="/" > 
               <Home />

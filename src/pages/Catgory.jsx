@@ -14,13 +14,8 @@ function Category() {
 
 
     useEffect(() => {
-      // Извлекаем все категории, где тип соответствует именованной переменной name
       const filteredCategories = productsData[0].categories.filter(category => category.type === name);
-      
-      // Извлекаем продукты из отфильтрованных категорий и объединяем их в один массив
       const products = filteredCategories.flatMap(category => category.products);
-      
-      // Установка состояния с полученными продуктами
       setTombs(products);
   }, [name]);
     
