@@ -1,19 +1,41 @@
+import { useEffect, useRef } from "react";
 import "../styles/contact.scss"
 
 function Contact() {
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        if (sectionRef.current) {
+          // Плавная прокрутка к секции
+          sectionRef.current.scrollIntoView({ behavior: "smooth" });
+          // Установка фокуса после плавной прокрутки
+          setTimeout(() => {
+            sectionRef.current.focus();
+          }, 500); // Подберите задержку по скорости скролла (например, 500 мс)
+        }
+      }, []);
     return ( 
-        <section className="contact-service-section">
+        <section className="contact-service-section blue-grey lighten-3"
+        ref={sectionRef}
+        tabIndex="-1" >
 <h2>📞 Контакты</h2>
 <ul className="contact-list">
 <li><span className="contact-strong">Москва:</span> Ул. Усиевича 29, корп. 1, 125319</li>
-<li><span className="contact-strong">Телефон:</span> +7 495 226 51 71 <span className="contact-strong">круглосуточно</span></li>
+
+<li><span className="contact-strong">Телефон:</span> +7 495 226 51 71 </li>
+<a
+              href="tel:+74952265171"
+              className="btn btn-success blue-grey darken-4"
+            >
+              +7 495 226 51 71
+            </a>
 </ul>
 <div className="contact-list-block">
 <span className="contact-strong">Название организации:</span><br />
 ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ ЛОПАТИН СЕРГЕЙ ВИКТОРОВИЧ
 <br /><br />
 <span className="contact-strong">Юридический адрес:</span><br />
-129346, РОССИЯ, г. Москва, ул. Малыгина, д. 3, корп. 2, кв. 102
+129346, РОССИЯ, г. Москва, ул. Малыгина, д. 3, корп. 2
 <br /><br />
 <span className="contact-strong">ИНН:</span> 771673499501<br />
 <span className="contact-strong">ОГРНИП:</span> 324774600299403

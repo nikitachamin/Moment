@@ -1,7 +1,22 @@
+import { useEffect, useRef } from "react";
 import "../styles/payment.scss"
 function Payment() {
+    const sectionRef = useRef(null);
+      
+      useEffect(() => {
+          if (sectionRef.current) {
+            // Плавная прокрутка к секции
+            sectionRef.current.scrollIntoView({ behavior: "smooth" });
+            // Установка фокуса после плавной прокрутки
+            setTimeout(() => {
+              sectionRef.current.focus();
+            }, 500); // Подберите задержку по скорости скролла (например, 500 мс)
+          }
+        }, []);
     return ( 
-        <section className="payment-service-section">
+        <section className="payment-service-section blue-grey lighten-3"
+        ref={sectionRef}
+    tabIndex="-1" >
   <h2>💳 Оплата</h2>
   <div className="payment-list-block">
     <p>

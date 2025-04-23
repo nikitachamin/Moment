@@ -1,8 +1,23 @@
+import { useEffect, useRef } from "react";
 import "../styles/delivery.scss"
 
 function Delivery() {
+     const sectionRef = useRef(null);
+  
+      useEffect(() => {
+          if (sectionRef.current) {
+            // Плавная прокрутка к секции
+            sectionRef.current.scrollIntoView({ behavior: "smooth" });
+            // Установка фокуса после плавной прокрутки
+            setTimeout(() => {
+              sectionRef.current.focus();
+            }, 500); // Подберите задержку по скорости скролла (например, 500 мс)
+          }
+        }, []);
   return (
-    <section className="delivery-section">
+    <section className="delivery-section"
+    ref={sectionRef}
+    tabIndex="-1" >
       <h2>Доставка памятников</h2>
       <p>
         Мы обеспечиваем надёжную и безопасную доставку памятников по Москве и

@@ -34,8 +34,6 @@ const ImageSlider = () => {
   }, []);
 
   const images = [
-    `${process.env.PUBLIC_URL}/img/slider/1.jpg`,
-    
     `${process.env.PUBLIC_URL}/img/slider/3.jpg`,
     `${process.env.PUBLIC_URL}/img/slider/4.jpg`,
     `${process.env.PUBLIC_URL}/img/slider/5.jpg`,

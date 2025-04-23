@@ -1,8 +1,23 @@
+import { useEffect, useRef } from "react";
 import "../styles/guarantee.scss"
 
 function Guarantee() {
+      const sectionRef = useRef(null);
+    
+        useEffect(() => {
+            if (sectionRef.current) {
+              // Плавная прокрутка к секции
+              sectionRef.current.scrollIntoView({ behavior: "smooth" });
+              // Установка фокуса после плавной прокрутки
+              setTimeout(() => {
+                sectionRef.current.focus();
+              }, 500); // Подберите задержку по скорости скролла (например, 500 мс)
+            }
+          }, []);
     return ( 
-        <section className="guarantee-service-section">
+        <section className="guarantee-service-section"
+        ref={sectionRef}
+        tabIndex="-1" >
   <h2>Гарантия и&nbsp;постгарантийное обслуживание</h2>
   <p>
     Мы уверены в качестве нашей работы и используемых материалов, поэтому предоставляем гарантию до <strong>3 лет</strong> на все памятники и элементы надгробных комплексов.

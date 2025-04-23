@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
+
 function Main() {
+  const history = useHistory();
+
+  const goToCatalog = () => {
+    // Передадим state
+    history.push('/', { scrollToCategories: true });
+  };
   return (
     <div className="Main-wrapper">
        <div className="main-top">
@@ -11,7 +20,7 @@ function Main() {
         <p className="main-text">
             доставка и установка по городу и области
         </p>
-        <div className="list-wrapper">
+        <div className="list-wrapper ">
         <ul className="main-list-left">
           <li> <span class="material-symbols-outlined main-icon">sell</span>Низкие цены</li>
           <li><span class="material-symbols-outlined main-icon">currency_ruble</span>Скидки</li>
@@ -21,8 +30,14 @@ function Main() {
         <li><span class="material-symbols-outlined main-icon">local_florist</span>Благоустройство</li>
         </ul>
         </div>
+        <button
+        className="btn rounded blue-grey darken-4"
+        onClick={goToCatalog}
+      >
+        КАТАЛОГ
+      </button>
       
-        <a className="btn rounded red">
+        <a className="btn rounded blue-grey darken-4">
         <Link to={`/about`} style={{textDecoration: "none", color: "white"}}>
         НАШИ РАБОТЫ</Link></a>
       </div>

@@ -4,28 +4,32 @@ import CategoryList from "../components/CategoryList";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
 import { productsData } from "../data";
+import { useLocation } from "react-router-dom/cjs/react-router-dom";
 
 
 function Home() {
     const [catalog, setCatalog] = useState([]);
-    const categoryListRef = useRef(null); // Создаем реф для CategoryList
+    const location = useLocation();
+    const categoryListRef = useRef();
 
     useEffect(() => {
         setCatalog(productsData[0].categories);
     }, []);
 
     useEffect(() => {
-        // Прокручиваем к CategoryList, когда данные загружаются
-        if (catalog.length && categoryListRef.current) {
-            categoryListRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (location.state && location.state.scrollToCategories) {
+          setTimeout(() => {
+            categoryListRef.current?.scrollIntoView({ behavior: "smooth" });
+          }, 0);
         }
-    }, [catalog]); // Запускаем эффект, когда catalog обновляется
+      }, [location.state]);
     
     return ( 
        <div className="wrapper">
        <Menu />
        <div style={{padding :'15px'}} >
        <Main/>
+
        {!catalog.length? <Preloader /> : (
         <div ref={categoryListRef}>
         <CategoryList catalog={catalog} />

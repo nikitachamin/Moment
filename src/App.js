@@ -21,7 +21,7 @@ function App() {
       <Router>
 
       <Header />
-          <main className="container">
+          <main className="container ">
          
             <Switch>  
               <Route exact path="/" > 

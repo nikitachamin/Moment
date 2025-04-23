@@ -1,7 +1,23 @@
 import "../styles/installation.scss"
+import { useEffect, useRef } from "react";
 
 function Installation() {
-  return (<>
+    const sectionRef = useRef(null);
+    
+    useEffect(() => {
+        if (sectionRef.current) {
+          // Плавная прокрутка к секции
+          sectionRef.current.scrollIntoView({ behavior: "smooth" });
+          // Установка фокуса после плавной прокрутки
+          setTimeout(() => {
+            sectionRef.current.focus();
+          }, 500); // Подберите задержку по скорости скролла (например, 500 мс)
+        }
+      }, []);
+  return (<section
+    ref={sectionRef}
+    tabIndex="-1" >
+  
     <h1 className="installation__title">Процесс установки памятника</h1>
     
     <div className="process-container">
@@ -54,7 +70,7 @@ function Installation() {
             </div>
         </div>
     </div>
-    </>
+    </section>
   );
 }
 

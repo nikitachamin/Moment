@@ -6,16 +6,17 @@ function CategoryItem(props) {
 
     
   return (
-    <div className="card" style={{ maxWidth:"262px"}}>
+    <div className="card  blue-grey lighten-3" style={{ maxWidth:"262px"}}>
       <div className="card-image" >
-        <img src={image} /> 
+      
+          <Link to={`/category/${type}`}><img src={image} className="zoom-image"/></Link> 
       </div>
-      <div className="card-content">
-      <span className="card-title">{name}</span>
-        {/* <p>{description.slice(0, 60)}...</p> */}
-      </div>
+      {/* <div className="card-content">
+      <span className="card-title"></span>
+        <p>{description.slice(0, 60)}...</p>
+      </div> */}
      <div className="card-action">
-        <Link to={`/category/${type}`} className="btn red">Смотреть категории </Link>
+        <Link to={`/category/${type}`} className="btn blue-grey darken-4">{name}</Link>
      </div>
     </div>
   );

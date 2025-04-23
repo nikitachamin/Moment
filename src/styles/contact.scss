@@ -1,5 +1,5 @@
 .contact-service-section {
-    background: #eafffb;
+ 
     border: 1px solid #b6e0e2;
     border-radius: 18px;
     padding: 27px 22px 23px 28px;
@@ -7,19 +7,19 @@
     }
     .contact-service-section h2 {
     font-size: 1.31rem;
-    color: #215f64;
+    
     margin-bottom: 12px;
     margin-top: 0;
     letter-spacing: 0.01em;
     }
     .contact-list-block {
     background: #f8fcfb;
-    border-left: 5px solid #ace6d4;
+   
     border-radius: 13px;
     padding: 19px 18px 12px 19px;
     margin-top: 14px;
     font-size: 1rem;
-    color: #235563;
+  
     line-height: 1.43;
     }
     .contact-list {
@@ -35,7 +35,7 @@
     gap: 7px;
     }
     .contact-strong {
-    color: #206265;
+
     font-weight: 600;
     }
     @media (max-width: 600px) {
@@ -48,6 +48,6 @@
     border-radius: 7px;
     }
     .contact-service-section h2 {
-    font-size: 1.13rem;
+    font-size: 2rem;
     }
     }

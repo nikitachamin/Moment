@@ -1,5 +1,5 @@
 function Footer() {
-    return <footer className="page-footer black center" >
+    return <footer className="page-footer blue-grey darken-3 center" >
 
     <div className="footer-copyright">
       <div className="footer-container">

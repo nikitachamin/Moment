@@ -2,7 +2,7 @@ import { useState } from "react";
 import MealItem from "./MealItem";
 
 function MealsList({ tombs }) {
-    const BATCH_SIZE = 10; // сколько показываем за одну загрузку
+    const BATCH_SIZE = 5; // сколько показываем за одну загрузку
 
     const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
 
@@ -21,7 +21,7 @@ function MealsList({ tombs }) {
          
         </div>
            {visibleCount < tombs.length && (
-            <button className="btn red" onClick={handleLoadMore} style={{display: "block", margin: "20px auto"}}>
+            <button className="btn blue-grey darken-4" onClick={handleLoadMore} style={{display: "block", margin: "20px auto"}}>
                 Загрузить еще
             </button>
         )}

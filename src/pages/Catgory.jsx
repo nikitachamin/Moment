@@ -24,7 +24,7 @@ function Category() {
         <div className="list-container" style={{ display: "flex" }}>
           <Menu />
           <div className="category-list" style={{ paddingLeft: "15px" }}>
-         <button className="btn red" onClick={goBack} style={{ marginBottom: "20px" }}>Назад</button>
+         <button className="btn blue-grey darken-3" onClick={goBack} style={{ marginBottom: "20px" }}>Назад</button>
         {!tombs.length ? <Preloader /> : <MealsList tombs={tombs} />}
         </div>
         </div>

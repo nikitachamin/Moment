@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Menu() {
-
+  const history = useHistory();
+  
+    const goToCatalog = () => {
+      // Передадим state
+      history.push('/', { scrollToCategories: true });
+    };
 
   return ( 
      
@@ -15,6 +21,14 @@ function Menu() {
           <Link to="/" className="menu-link">
             НА ГЛАВНУЮ
           </Link>
+        </li>
+        <li className="menu-li">
+        <a className="menu-link"
+       
+        onClick={goToCatalog}
+      >
+        КАТАЛОГ
+      </a>
         </li>
         {/* <li className="menu-li">
           <Link to={`/category/straight`} className="menu-link">

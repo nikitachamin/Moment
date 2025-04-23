@@ -175,7 +175,7 @@ export const productsData = [
         name: "Фигурные",
         id: '2',
         description: "Товары категории прямые представляют собой качественные и надежные изделия.",
-        image: `${process.env.PUBLIC_URL}/img/categories/curly.jpg`,
+        image: `${process.env.PUBLIC_URL}/img/categories/curly.webp`,
         type: "curly",
         products: [
             { img: "100", price: "39150", size: "100*50*5", article: "ВФ-100" },
@@ -454,10 +454,10 @@ export const productsData = [
         name: "Горизонтальные",
         id: "3",
         description: "Товары категории прямые представляют собой качественные и надежные изделия.",
-        image: `${process.env.PUBLIC_URL}/img/categories/horizontal.jpg`,
+        image: `${process.env.PUBLIC_URL}/img/categories/horizontal.webp`,
         type: "horizontal",
         products: [
-            { img: "10", price: null, size: "80*60*5", article: "гп10" },
+            { img: "10", price: "33200.0", size: "80*60*5", article: "гп10" },
             { img: "100", price: "34800.0", size: "80*60*5", article: "гп100" },
             { img: "11", price: "36200.0", size: "80*60*5", article: "гп11" },
             { img: "12", price: "33100.0", size: "80*60*5", article: "гп12" },
@@ -782,7 +782,7 @@ export const productsData = [
             { img: "222", price:  "", size:  "", article: "" }
         ]
         },
-        {  name: "Комбинированные-горизонтальные",
+        {  name: "Комбинированные-2",
             id: '5',
             description: "Товары категории прямые представляют собой качественные и надежные изделия.",
             image: `${process.env.PUBLIC_URL}/img/categories/comb_horizontal.webp`,
