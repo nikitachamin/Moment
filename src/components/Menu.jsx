@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/menu.scss"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Menu() {

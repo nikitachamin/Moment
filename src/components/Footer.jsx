@@ -5,7 +5,7 @@ function Footer() {
       <div className="footer-container">
       © 2025 Copyright Text
       <a
-        href="https://wa.me/79109725858"
+        href="https://wa.me/79854270852"
         className="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"

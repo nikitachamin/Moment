@@ -1,12 +1,12 @@
+@import "materialize-css/sass/materialize.scss";
+
+
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.25rem;
   color: #263238;
-  background-color: #b0bec5; /* светлый нейтральный фон */
-  // background-image: url("../public/img/cover.webp");
-  // background-size: cover; /* Чтобы изображение заполнило весь контейнер */
-  // background-position: center; /* Центрирование изображения */
-  // background-repeat: no-repeat; /* Не повторять изображение */
+  background-color: #eceff1; 
 }
 strong {
   font-weight: 600;
@@ -41,173 +41,9 @@ p {
   display: flex;
   position: relative;
 }
-.header {
-  position: relative;
-}
-nav {
-  padding: 0 1rem;
-  padding-left: calc(50% - 700px);
-  padding-right: calc(50% - 700px);
-}
 
-.center {
-  padding-left: calc(50% - 700px);
-  padding-right: calc(50% - 700px);
-}
-.nav-wrapper {
-  display: flex;
-  justify-content: space-around;
-}
-.nav-links {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.header_info-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 60px;
-  color: #263238;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 15px;
-}
 
-.logo_info {
-  display: flex;
-  max-width: 300px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.logo_info_title {
-  color: black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-.header_info-place {
-  text-align: center;
-  max-width: 300px;
-}
 
-.adress_title {
-  color: #263238;
-  font-size: 24px;
-}
-
-.text_decoration {
-  text-decoration-line: underline;
-  text-decoration-color: linear-gradient(20deg, #6a11cb, #2575fc);
-  text-decoration-thickness: 2px;
-}
-
-.header_phone {
-  margin-bottom: 20px;
-}
-.menu-nav {
-  position: relative;
-  display: flex;
-  position: sticky;
-  top: 210px;
-  width: 160px;
-  background-color: #fafafe;
-}
-
-.menu-left {
-  position: sticky;
-  top: 210px;
-  width: 200px;
-  background-color: #fafafe;
-  display: flex;
-  flex-direction: column;
-
-  transition: all 0.3s;
-  padding: 10px;
-  background-color: #fafafe;
-  height: 100vh;
-  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-  z-index: 1000;
-}
-.menu-left-links {
-  margin-left: 20px;
-}
-.menu-li {
-  margin-bottom: 5px;
-
-  width: 150px;
-  position: relative;
-}
-.menu-li :hover {
-  color: red;
-  &::before {
-    background-color: red;
-    left: calc(100% + 0.5rem);
-  }
-}
-.menu-li ::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -1rem;
-  width: 0.25rem;
-  height: 100%;
-  background: #263238;
-  transition: 0.6s;
-}
-.menu-link {
-  --menu-link-color: var(black);
-  position: relative;
-  background: linear-gradient(var(red) 0 100%) left / 0 no-repeat;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: background-size 0.45s 0.04s;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-}
-.menu-link ::before {
-  position: absolute;
-  content: attr(data-text);
-  z-index: -1;
-  background-color: red;
-}
-.Main-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-}
-.main {
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-}
-.main-top {
-  display: flex;
-}
-.main-title {
-  font-size: 36px;
-  font-weight: bold;
-}
-.main-text {
-  font-size: 24px;
-}
-.main-icon {
-  margin-right: 5px;
-  color: #263238;
-}
-.main_logo {
-  max-width: 700px;
-}
-.list-wrapper {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 15px;
-}
 .btn {
   min-width: 200px;
   border-radius: 1rem;
@@ -218,25 +54,7 @@ nav {
     transform: scale(1.1); // Увеличиваем в 1.1 раза при наведении
   }
 }
-.main-bottom {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-.bottom-item {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main-bottom-text {
-  text-align: center;
-}
-.main-bottom-logo {
-  font-size: 45px;
-  color: #263238;
-}
+
 .content {
   padding: 1.5rem;
   min-height: calc(100vh - 70px - 64px);
@@ -364,6 +182,22 @@ nav {
 .whats-app{
   background: linear-gradient(20deg, #6a11cb, #2575fc);
 }
+@media (max-width: 1440px){
+  .main_logo {
+    display: none;
+  }
+}
+@media (max-width: 1040px){
+  .main_logo {
+    display: none;
+  }
+  .menu-left{
+    display: none;
+  }
+  nav ul a{
+    padding: 0 5px;
+  }
+}
 @media (max-width: 767px) {
   body {
     font-size: 1.2rem;
@@ -412,9 +246,7 @@ nav {
   .logo_info p {
     font-size: 20px;
   }
-  .main_logo {
-    display: none;
-  }
+  
   .main-bottom {
     flex-wrap: wrap;
   }

@@ -5,7 +5,7 @@ function MealItem(props) {
   const { name } = useParams();
   const { size, price, img, article } = props;
   const createWhatsAppLink = () => {
-   const message = `Добрый день, меня интересует товар ${article}`;
+   const message = `Добрый день! Меня интересует товар с артиклем - ${article}`;
    return `https://wa.me/${+79109725858}?text=${encodeURIComponent(message)}`;
 };
   return (

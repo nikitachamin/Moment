@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/header.scss"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Header() {
@@ -149,7 +150,7 @@ function Header() {
           </ul>
         </div>
       </nav>
-      <div className="header_info-wrapper blue-grey lighten-3">
+      <div className="header_info-wrapper blue-grey lighten-5">
         <div className="logo_info">
           <h1 className="logo_info_title">GRAND STONE</h1>
           <h4 className="logo_info_title">Гранитная мастерская</h4>

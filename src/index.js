@@ -1,6 +1,7 @@
 import React from 'react';
+import 'materialize-css/dist/js/materialize.min.js';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
+import '../src/styles/index.scss'
 import App from './App';
 
 

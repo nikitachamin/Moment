@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, Suspense, lazy } from "react";
 import Preloader from "../components/Preloader";
-import CategoryList from "../components/CategoryList";
+
 import Main from "../components/Main";
 import Menu from "../components/Menu";
 import { productsData } from "../data";
 import { useLocation } from "react-router-dom/cjs/react-router-dom";
+const CategoryList = lazy(() => import("../components/CategoryList"));
 
 
 function Home() {
@@ -31,8 +32,10 @@ function Home() {
        <Main/>
 
        {!catalog.length? <Preloader /> : (
-        <div ref={categoryListRef}>
-        <CategoryList catalog={catalog} />
+        <div ref={categoryListRef} >
+         <Suspense fallback={<Preloader />}>
+          <CategoryList catalog={catalog} />
+        </Suspense>
         </div>
        )}
        </div>

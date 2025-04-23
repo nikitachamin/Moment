@@ -1,0 +1,68 @@
+.menu-nav {
+    position: relative;
+    display: flex;
+    position: sticky;
+    top: 210px;
+    width: 160px;
+    background-color: #fafafe;
+  }
+  
+  .menu-left {
+    position: sticky;
+    top: 210px;
+    width: 200px;
+    background-color: #fafafe;
+    display: flex;
+    flex-direction: column;
+  
+    transition: all 0.3s;
+    padding: 10px;
+    background-color: #fafafe;
+    height: 100vh;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    z-index: 1000;
+  }
+  .menu-left-links {
+    margin-left: 20px;
+  }
+  .menu-li {
+    margin-bottom: 5px;
+  
+    width: 150px;
+    position: relative;
+  }
+  .menu-li :hover {
+    color: red;
+    &::before {
+      background-color: red;
+      left: calc(100% + 0.5rem);
+    }
+  }
+  .menu-li ::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -1rem;
+    width: 0.25rem;
+    height: 100%;
+    background: #263238;
+    transition: 0.6s;
+  }
+  .menu-link {
+    --menu-link-color: var(black);
+    position: relative;
+    background: linear-gradient(var(red) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-size 0.45s 0.04s;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+  .menu-link ::before {
+    position: absolute;
+    content: attr(data-text);
+    z-index: -1;
+    background-color: red;
+  }

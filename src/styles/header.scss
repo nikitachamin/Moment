@@ -1,0 +1,65 @@
+.header {
+    position: relative;
+  }
+  nav {
+    padding: 0 1rem;
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+  }
+  
+  .center {
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+  }
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .header_info-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 60px;
+    color: #263238;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  
+  .logo_info {
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo_info_title {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .header_info-place {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .adress_title {
+    color: #263238;
+    font-size: 24px;
+  }
+  
+  .text_decoration {
+    text-decoration-line: underline;
+    text-decoration-color: linear-gradient(20deg, #6a11cb, #2575fc);
+    text-decoration-thickness: 2px;
+  }
+  
+  .header_phone {
+    margin-bottom: 20px;
+  }
