@@ -14,7 +14,6 @@
     background-color: #fafafe;
     display: flex;
     flex-direction: column;
-  
     transition: all 0.3s;
     padding: 10px;
     background-color: #fafafe;
@@ -65,4 +64,11 @@
     content: attr(data-text);
     z-index: -1;
     background-color: red;
+  }
+
+
+  @media (max-width: 1024px) {
+
+ 
+  
   }

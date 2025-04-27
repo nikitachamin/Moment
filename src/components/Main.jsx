@@ -38,9 +38,11 @@ function Main() {
         КАТАЛОГ
       </button>
       
-        <a className="btn rounded blue-grey darken-4">
-        <Link to={`/about`} style={{textDecoration: "none", color: "white"}}>
-        НАШИ РАБОТЫ</Link></a>
+      <Link to="/about" style={{ textDecoration: "none", display: "block" }}>
+  <button className="btn rounded blue-grey darken-4" style={{ color: "white" , width: "100%"  }}>
+    НАШИ РАБОТЫ
+  </button>
+</Link>
       </div>
       <img className="main_logo" src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="logo" />
        </div>

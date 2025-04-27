@@ -29,7 +29,10 @@ function Home() {
        <div className="wrapper">
        <Menu />
        <div style={{padding :'15px'}} >
-       <Main/>
+       <Suspense fallback={<Preloader />}>
+            <Main/> 
+        </Suspense>
+     
 
        {!catalog.length? <Preloader /> : (
         <div ref={categoryListRef} >

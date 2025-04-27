@@ -6,7 +6,7 @@ function MealItem(props) {
   const { size, price, img, article } = props;
   const createWhatsAppLink = () => {
    const message = `Добрый день! Меня интересует товар с артиклем - ${article}`;
-   return `https://wa.me/${+79109725858}?text=${encodeURIComponent(message)}`;
+   return `https://wa.me/${+79854270852}?text=${encodeURIComponent(message)}`;
 };
   return (
     <div className="card  blue-grey lighten-3">
@@ -14,7 +14,7 @@ function MealItem(props) {
         className="card-image"
         style={{ maxHeight: "262px", maxWidth: "262px" }}
       >
-        <img src={`${process.env.PUBLIC_URL}/img/${name}/${img}.webp`} alt={img} className="zoom-image"/>
+        <img src={`${process.env.PUBLIC_URL}/img/${name}/${img}.webp`}  loading="lazy" alt={img} className="zoom-image"/>
       </div>
       <div className="card-content">
         {price? <span className="card-title"><strong >Стоимость:</strong> от {price} р.</span>  : (<span className="card-title">Стоимость индивидуальная</span> )}

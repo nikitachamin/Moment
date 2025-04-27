@@ -804,7 +804,7 @@ export const productsData = [
                 { img: "14", price:  "", size:  "", article: "" },
                 { img: "15", price:  "", size:  "", article: "" },
                 { img: "16", price:  "", size:  "", article: "" },
-                { img: "17", price:  "", size:  "", article: "" },
+       
                 { img: "18", price:  "", size:  "", article: "" },
                 { img: "19", price:  "", size:  "", article: "" },
                 { img: "20", price:  "", size:  "", article: "" },

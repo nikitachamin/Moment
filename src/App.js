@@ -3,6 +3,8 @@ import React, { Suspense, lazy } from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+
+
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Category = lazy(() => import('./pages/Category')); // проверьте имя файла!
@@ -15,7 +17,10 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 
 function App() {
+
+
   return (
+  
     <Router>
       <Header />
       <main className="container">
@@ -34,7 +39,16 @@ function App() {
         </Suspense>
       </main>
       <Footer />
+      <a
+        href="https://wa.me/79854270852"
+        className="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+      </a>
     </Router>
+
   );
 }
 

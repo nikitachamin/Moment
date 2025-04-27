@@ -9,7 +9,7 @@ function CategoryItem(props) {
     <div className="card  blue-grey lighten-3" style={{ maxWidth:"262px"}}>
       <div className="card-image" >
       
-          <Link to={`/category/${type}`}><img src={image} className="zoom-image"/></Link> 
+          <Link to={`/category/${type}`}><img src={image} className="zoom-image"  loading="lazy" alt={`${name} фото`}/></Link> 
       </div>
       {/* <div className="card-content">
       <span className="card-title"></span>

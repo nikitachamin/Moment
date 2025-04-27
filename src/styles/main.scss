@@ -53,3 +53,32 @@
     font-size: 45px;
     color: #263238;
   }
+  @media (max-width: 1440px){
+    .main_logo {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+
+    .menu-left {
+      display: none;
+    }
+  
+  
+  }
+
+
+  @media (max-width: 400px) {
+
+    .main h1 {
+        font-size: 24px !important;
+      }
+      .main-title {
+        font-size: 24px !important; /* Уменьшаем шрифт */
+        margin: 0; /* Убираем лишние отступы */
+        padding: 0; /* Убираем лишние внутренние отступы */
+        line-height: 1.2; /* Уменьшаем межстрочное расстояние для лучшего вписывания */
+      }
+  
+  }
+

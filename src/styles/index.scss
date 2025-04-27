@@ -1,13 +1,15 @@
 @import "materialize-css/sass/materialize.scss";
 
 
+@font-face {
 
-body {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
   color: #263238;
   background-color: #eceff1; 
 }
+
+
 strong {
   font-weight: 600;
 }
@@ -17,13 +19,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:
-    "Merriweather",
-    Times New Roman,
-    serif;
+  font-family: 'Merriweather 48pt';
+  src: url('../fonts/Merriweather48pt-Bold.woff2') format('woff2');
   font-weight: 700;
-  font-size: 40px;
-  color: #28323d; /* более темный оттенок для заголовков */
+
+  color: #28323d; 
 }
 p {
   font-size: 1.2rem !important;
@@ -182,11 +182,7 @@ p {
 .whats-app{
   background: linear-gradient(20deg, #6a11cb, #2575fc);
 }
-@media (max-width: 1440px){
-  .main_logo {
-    display: none;
-  }
-}
+
 @media (max-width: 1040px){
   .main_logo {
     display: none;
@@ -215,37 +211,7 @@ p {
     padding-left: calc(50% - 200px);
     padding-right: calc(50% - 200px);
   }
-  nav {
-    height: 200px !important;
-    line-height: 0px !important;
-  }
-  .nav-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0px;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    & li {
-      height: 40px;
-    }
-  }
-  .header_info-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 5px;
-    text-align: center;
-  }
-  .logo_info p {
-    font-size: 20px;
-  }
+
   
   .main-bottom {
     flex-wrap: wrap;
@@ -305,13 +271,5 @@ p {
   h1{
     font-size: 24px !important;
   }
-  .main h1 {
-    font-size: 24px !important;
-  }
-  .main-title {
-    font-size: 24px !important; /* Уменьшаем шрифт */
-    margin: 0; /* Убираем лишние отступы */
-    padding: 0; /* Убираем лишние внутренние отступы */
-    line-height: 1.2; /* Уменьшаем межстрочное расстояние для лучшего вписывания */
-  }
+
 }

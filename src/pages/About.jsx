@@ -1,6 +1,20 @@
+import { useEffect } from "react";
 import ImageSlider from "../components/Slider";
 
 function About() {
+  useEffect(() => {
+    document.title = "О компании";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Подробнее о нашей компании.");
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = "Подробнее о нашей компании.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   return (
     <>
      

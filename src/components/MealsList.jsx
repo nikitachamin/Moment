@@ -1,8 +1,12 @@
 import { useState } from "react";
-import MealItem from "./MealItem";
+
+import React, { Suspense } from "react";
+import Preloader from "./Preloader";
+
+const MealItem = React.lazy(() => import('./MealItem'));
 
 function MealsList({ tombs }) {
-    const BATCH_SIZE = 5; // сколько показываем за одну загрузку
+    const BATCH_SIZE = 10; // сколько показываем за одну загрузку
 
     const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
 
@@ -16,7 +20,9 @@ function MealsList({ tombs }) {
     return (<>
         <div className="list">
             {visibleTombs.map(tomb => (
+                <Suspense fallback={<Preloader />}>
                 <MealItem key={tomb.article} {...tomb} />
+                </Suspense>
             ))}
          
         </div>
